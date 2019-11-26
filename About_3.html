@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Economica|Fredoka+One|Roboto+Mono|Playfair&display=swap" rel="stylesheet">
+    <style>
+        body{
+            height:auto;
+            width:100%;
+            margin:0px;
+/*            scroll-behavior: smooth;*/
+/*            overflow:hidden;*/
+        
+            
+        }
+        
+    .left1{
+            position: fixed;
+            top:0px;
+            left:0px;
+            width:4%;
+            height: 100%;
+            background-color: red;
+        }
+        .right1{
+            position: fixed;
+            top:0px;
+            right:0px;
+            width:4%;
+            height: 100%;
+            background-color:lawngreen;
+        }
+        .left2{
+            position: fixed;
+            top:0px;
+            left:4%;
+            width:4%;
+            height: 100%;
+            background-color: grey;
+        }
+        .right2{
+            position: fixed;
+            top:0px;
+            right:4%;
+            width:4%;
+            height: 100%;
+            background-color: yellow;
+        }
+        .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:100px;
+        padding:15px;
+        margin:10px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 20px;
+        }
+        .menu ul li a:hover{
+        color:orange;
+    }
+        .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:30px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 15px;
+        }
+        .text1
+        {
+             word-wrap: break-word;
+             font-family: monospace;
+             position: fixed;
+             top:120px;
+            left:5.3%;
+/*            z-index: 255581841515151;*/
+             width:10px;
+             height:auto;
+            font-size:2.5vw;
+            color:white;
+            font-weight: bolder;
+            text-shadow:5px 5px 15px red;
+            animation: text 1s linear infinite;
+        }
+        @keyframes text{
+            0%{
+                transform: translateY(-15px);
+            }
+            50%{
+                transform: translateY(0px);
+            }
+            100%{
+                transform: translateY(-15px);
+            }
+        }
+    .text2
+        {
+             word-wrap: break-word;
+             font-family: monospace;
+             position: fixed;
+             top:245px;
+            right:6%;
+             width:10px;
+             height:auto;
+            font-size:2.5vw;
+            color:white;
+            font-weight: bolder;
+            text-shadow:5px 5px 15px red;
+            animation: text 1s linear infinite;
+        }
+         .container{
+            position:relative;
+            margin:0px auto;
+            margin-top:7.5%;
+            width:84%;
+            height:0;
+            padding-bottom:40%;
+            background-image:url('photo7.jpg');
+             background-size: cover;
+             animation:about 2s linear infinite;
+/*
+            border:10px solid orange;
+            border-radius:10px;
+*/
+        }
+        @keyframes about{
+            0%{
+                filter: brightness(70%);
+            }
+            50%{
+                filter: brightness(100%);
+            }
+            100%{
+                filter: brightness(70%);
+            }
+        }
+        
+        .img_txt
+        {
+            position:absolute;
+            top:40%;
+            transform: translateY(-50%);
+            left:5%;
+            font-size:4vw;
+            font-family: 'Fredoka One', cursive;
+            background-color: rgba(255,255,255,.7);
+            padding:10px 20px 10px 15px;
+            border-radius: 10px;
+            border-left: 15px solid #39b539;
+            text-shadow:3px 3px 15px #1bbae0;
+            transition: 5s;
+        }
+        .me{
+/*            border:5px solid green;*/
+            height:auto;
+            padding: 100px 100px;
+            width:84%;
+            position:relative;
+            margin:0 auto;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .photo8{
+            position: relative;
+            height:540px;
+            width:45%;
+        }
+        .photo8_txt{
+            position:absolute;
+            right:27%;
+            color:white;
+            font-size: 3vw;
+            font-family: 'Economica', sans-serif;
+            background-color: rgb(103, 98, 98);
+            padding:10px 20px 10px 15px;
+            border-radius: 10px;
+            border-left: 15px solid #39b539;
+            
+            
+        }
+        .para1
+        {
+           position:absolute;
+            left:56%;
+            color:rgba(255,255,255,0.5); 
+            top:200px;
+/*            text-align: justify;*/
+            width:37%;
+            font-size:17px;
+            line-height: 30px;
+            font-family: "Muli",sans-serif;
+            display: block;
+            
+        }
+        .video
+        {
+/*            border:10px solid orange;*/
+            height:630px;
+            padding: 100px 100px;
+            width:84%;
+            position:relative;
+            margin:0 auto;
+            box-sizing: border-box;
+            background-color: white; 
+}
+        .head_1{
+            position: absolute;
+            top:70px;
+            left:50%;
+            transform: translateX(-50%);
+            font:25px 'Playfair Display', serif;
+            color:orange;
+            
+        }
+        .head_2{
+            position: absolute;
+            top:105px;
+            left:50%;
+            transform: translateX(-50%);
+            font:2.5vw 'Roboto Mono', monospace;
+            color:black;
+            
+        }
+        video{
+            position: absolute;
+            top:160px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .video img{
+            position:absolute;
+            top:320px;
+            left:50%;
+            transform: translateX(-50%);
+            z-index:55;
+            opacity: 0.6;
+        }
+        .end
+        {
+/*            border:10px solid green;*/
+            height:480px;
+            padding: 100px 100px;
+            width:84%;
+            position:relative;
+            margin:0 auto;
+            box-sizing: border-box;
+            background-color: black; 
+}
+        .end1{
+/*            border:5px solid red;*/
+            height:180px;
+            width:30%;
+            color:rgba(255,255,255,0.9);
+            line-height:22px;
+        }
+        .end2{
+/*            border:5px solid yellow;*/
+            height:200px;
+            width:20%;
+/*            display:inline;*/
+            position: absolute;
+            left:45%;
+/*            transform: translateX(-50%);*/
+            top:100px;
+            color:rgba(255,255,255,0.8);
+        }
+        .end2 ul{
+            list-style-type: none;
+            position:absolute;
+            left:-17%;
+            
+            
+        }
+        .end2 ul li a{
+    text-decoration: none;
+            color:rgba(255,255,255,.7);
+            margin-bottom: 20px;
+            display:block;
+            font: 16px sans-serif;
+        }
+        .end2 ul li a:hover{
+            color: rgba(255,255,255,0.4);
+/*            font-weight: bold;*/
+        }
+        .end3{
+/*            border:5px solid pink;*/
+            height:150px;
+            width:25%;
+/*            display:inline;*/
+            position: absolute;
+            left:81%;
+            transform: translateX(-50%);
+            top:100px;
+/*            line-height: 150px;*/
+        }
+        .btn{
+            display:inline-block;
+            width:60px;
+            height:60px;
+            background:rgba(255,255,255,.2);
+            margin:0px;
+            border-radius:50%;
+            box-shadow: 0px 5px 15px -5px #00000070; 
+            overflow:hidden;
+            position:relative;
+            top:30%;
+            left:10%;
+            color:orange;
+            text-align: center;
+        }
+    .btn i
+        {
+            font-size:24px;
+            line-height: 60px;
+            transition:0.2s linear;
+        }
+        .btn:hover i{
+            transform:scale(1.3);
+            color:blue;
+            
+        }
+        .btn::before{
+            content:"";
+            position:absolute;
+            width:120%;
+            height:120%;
+            background-color: white;
+            transform:rotate(45deg);
+            left:-110%;
+            top:90%;
+        }
+        .btn:hover::before{
+            animation:aaa .7s 1;
+            top:-10%;
+            left:-10%;
+        }
+        @keyframes aaa{
+            0%{
+             left:-110%;
+            top:90%;   
+            }
+            50%{
+               left:10%;
+                top:-30%;
+            }
+            100%{
+              top:-10%;
+            left:-10%;  
+            }
+        }
+        
+    </style>
+    <script>
+    function play1(){
+           var vid1=document.getElementById('vid');
+        if (vid1.paused)
+  {         
+     vid1.play();
+//     $(".fa-play-circle-o").toggle();
+      document.getElementById('icon1').src='pause.png';
+  }
+  else 
+  {
+    vid1.pause();
+//    $(".fa-play-circle-o").toggle();
+      document.getElementById('icon1').src='play.png';
+  }
+        
+        }
+    </script>
+</head>
+
+<body>
+    <div class="left1">
+       
+   </div><div class="left2">
+       <p class="text1">PHOTOGRAPHIC</p>
+   </div><div class="right2"></div>
+   <div class="right1">
+       <p class="text2">WORLD</p>
+   </div>
+   <div class="menu">
+     <div>
+         <span class="q1">Oh Snap!<i class="fa fa-camera-retro" style="font-size:40px;color:black" aria-hidden=true></i></span>
+       </div>
+          <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="" style="color: orange">About</a></li>
+           <li><a href="photography.html">Photography</a></li>
+           <li><a href="Event.html">Event</a></li>
+           <li><a href="contact.html">Contact</a></li>
+       </ul>
+   </div>
+    <div class="container">
+    <span class="img_txt">ABOUT US</span>    </div>
+    <div class="me">
+        <img src="photo8.jpg" class="photo8">
+        <span class="photo8_txt">ABOUT ME</span>
+        <span class="para1">I am a Wedding and Event Photographer in Zurich, Basel and Geneva.<br>
+In 1947, I found a job as a fashion photographer in the US. I used 35mm Leica, unconventional at the time. Between 1950 and ’59 I turned my attention to street and wedding photography.
+This is where i became most famous. The Guggenheim Fellowship allowed me to travel the country, resulting in my most famous work: The Americans.
+<br>
+I worked closely to Walker Evans and became one of the world’s most famous Event photographers. I supplemented my visuals with text, written straight onto the negatives and prints.
+</span>
+    </div>
+    <div class="video">
+       <span class="head_1">See My Work</span>
+       <span class="head_2">See The Video</span>
+<!--       <i class="fa fa-play-circle-o" id="played" aria-hidden="true" onclick="play()"></i>-->
+<img src="play.png" id="icon1" height="90px" width="90px" alt=""  onclick="play1()">
+<!--       <i class="fa fa-pause-circle-o" aria-hidden="true"></i>-->
+        <video width="700px" height="400px" id="vid" poster="photo3.jpg" onclick="play1()">
+  <source src="video2.mp4" type="video/mp4">
+  
+<!--  <source src="mov_bbb.ogg" type="video/ogg">-->
+  Your browser does not support HTML5 video.
+</video>
+    </div>
+    <div class="end">
+       <div class="end1">
+        <span style="font-weight: bold;font-size: 20px;font-family: monospace;">About Me</span><br><br>
+         LIFE IS LIKE A CAMERA. JUST FOCUS WHAT'S IMPORTANT AND CAPTURE THE GOOD TIMES, DEVELOP FROM THE NEGATIVES AND IF THINGS DON'T WORK OUT, JUST TAKE ANOTHER SHOT.
+       </div>
+       <div class="end2">
+          <span style="font-weight: bold;font-size: 20px;color:rgba(255,255,255,0.9);font-family: monospace;">Quick&nbsp;Links</span><br><br>
+          <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Terms of Service</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Contact Us</a></li>
+          </ul>
+       </div>   
+       <div class="end3">
+         <a class=btn href="https://www.facebook.com/">
+           <i class="fa fa-facebook" aria-hidden="true"></i>
+       </a>
+    <a  class=btn href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a class=btn href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+       </div>
+       <br><br><br><br>
+        
+       <hr style="border: 1px solid rgba(255,255,255,0.2);">    
+       <p style="color:white;text-align: center;margin-top: 50px;">
+
+Copyright © 2019 All rights reserved. 
+
+</p>
+    </div>
+</body>
+</html>

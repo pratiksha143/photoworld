@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Economica|Fredoka+One|Roboto+Mono|Fugaz+One|Barlow+Condensed|Playfair&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding:0px;
+            margin:0px;
+            height: auto;
+            
+        }
+    .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:100px;
+        padding:15px;
+        margin:10px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 20px;
+        }
+        .menu ul li a:hover{
+        color:orange;
+    }
+        .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:30px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 15px;
+        }
+         .container{
+            position:relative;
+/*            margin:0px;*/
+            margin-top:100px;
+            width:100%;
+            height:0;
+            
+            padding:0px 0px 40% 0px;
+            background-image:url('event2.jpeg');
+             background-size: cover;
+             
+/*
+            border:10px solid orange;
+            border-radius:10px;
+*/
+        }
+       
+        
+        .img_txt
+        {
+            position:absolute;
+            top:30%;
+            transform: translateY(-50%);
+            left:5%;
+            font-size:4vw;
+            font-family: 'Fredoka One', cursive;
+            background-color: rgba(255,255,255,.7);
+            padding:10px 20px 10px 15px;
+            border-radius: 10px;
+            border-left: 15px solid #b20ee3;
+            text-shadow:3px 3px 15px #d99414;
+            transition: 5s;
+        }
+        .img_txt1
+        {
+            position:absolute;
+            top:48%;
+
+            left:5%;
+            font-size:2vw;
+            font-family: sans-serif;
+/*            background-color: rgba(255,255,255,.7);*/
+/*            padding:10px 20px 10px 15px;*/
+            border-radius: 10px;
+            border-left: 15px solid #11d154;
+            color: white;
+            width:48%;
+            line-height: 40px;
+            padding-left: 10px;
+/*            text-shadow:3px 3px 15px #1eed1e;*/
+/*            transition: 5s;*/
+        }div.images{
+            padding:100px 10%;
+            max-width:100%;
+            min-height:100%;
+            overflow: hidden;
+            border-bottom: 2px solid orange;
+/*            position:relative;*/
+/*            display:inline-flex;*/
+        }
+        div.img1{
+            margin:20px;
+/*            border:3px solid grey;*/
+            float:left;
+            width:300px;
+        
+        }
+        div.img1 img{
+            width:100%;
+            height: 350px;
+        }
+        div.img1 img:hover{
+            cursor: pointer;
+            filter: brightness(70%);
+            transform: scale(1.1);
+            transition: transform 0.5s;
+        }
+        @media screen and (max-width:600px){
+        
+            .img_txt1
+        {
+            position:absolute;
+            top:48%;
+
+            left:5%;
+            font-size:15px;
+            font-family: sans-serif;
+/*            background-color: rgba(255,255,255,.7);*/
+/*            padding:10px 20px 10px 15px;*/
+            border-radius: 10px;
+            border-left: 15px solid #11d154;
+            color: white;
+            width:48%;
+            line-height: 20px;
+            padding-left: 10px;
+        }
+        }
+@media screen and (max-width:1020px)
+        {
+.q1{
+display:none;
+}
+
+}
+    @media screen and (max-width:1000px)
+        {
+            .fa fa-camera-retro{
+                font-size:20px;
+            }
+          .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:25px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 10px;
+        }  
+            .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:80px;
+        padding:10px;
+        margin:7px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        }
+     @media screen and (max-width:800px)
+        {
+            .fa fa-camera-retro{
+                font-size:18px;
+            }
+          .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:20px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 10px;
+        }  
+            .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:70px;
+        padding:10px;
+        margin:6px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        }
+     @media screen and (max-width:600px)
+        {
+            .fa fa-camera-retro{
+                font-size:16px;
+            }
+          .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:18px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 10px;
+        }  
+            .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:60px;
+        padding:10px;
+        margin:6px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+     <div>
+         <span class="q1">Oh Snap!<i class="fa fa-camera-retro" style="font-size:40px;color:black" aria-hidden=true></i></span>
+       </div>
+          <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="About.html">About</a></li>
+           <li><a href="photography.html">Photography</a></li>
+           <li><a href="Event.html" style="color: orange">Event</a></li>
+           <li><a href="contact.html">Contact</a></li>
+       </ul>
+   </div>
+   <div class="container">
+    <span class="img_txt">Events</span>
+       <span class="img_txt1">TO ME, PHOTOGRAPHY IS THE SIMULTANEOUS RECOGNITION, IN A FRACTION OF A SECOND, OF THE SIFNIFICANCE OF AN EVENT.</span>
+        </div>
+        <div class="images">
+          <fieldset style="text-align: center;font-size: 30px;font-family:Barlow Condensed, sans-serif;border-color: #6fd110 red orange yellow;border-width: thick">
+          <legend>&nbsp;&nbsp; Engagement Ceremony&nbsp;&nbsp; </legend>
+           <div class="img1" style="width:450px;"><img src="engage1.jpg" alt=""></div>
+           <div class="img1" style="width:450px;"><img src="engage2.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="engage3.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="engage4.jpg" alt=""></div>
+           </fieldset>
+
+        </div>
+        <div class="images">
+          <fieldset style="text-align: center;font-size: 30px;font-family:Barlow Condensed, sans-serif;border-color: #6fd110 red orange yellow;border-width: thick">
+          <legend>&nbsp;&nbsp; Mehendi Ceremony&nbsp;&nbsp; </legend>
+           <div class="img1" style="width:450px;"><img src="mehendi1.jpg" alt=""></div>
+           <div class="img1" style="width:450px;"><img src="mehendi2.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="mehendi3.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="mehendi4.jpeg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="mehendi5.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="mehendi6.jpg" alt=""></div>
+           </fieldset>
+
+        </div>
+        <div class="images">
+          <fieldset style="text-align: center;font-size: 30px;font-family:Barlow Condensed, sans-serif;border-color: #6fd110 red orange yellow;border-width: thick">
+          <legend>&nbsp;&nbsp; Sangeet Ceremony&nbsp;&nbsp; </legend>
+           <div class="img1" style="width:450px;"><img src="sangeet1.jpg" alt=""></div>
+           <div class="img1" style="width:450px;"><img src="sangeet2.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="sangeet3.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="sangeet4.jpg" alt=""></div>
+           </fieldset>
+
+        </div>
+        <div class="images">
+          <fieldset style="text-align: center;font-size: 30px;font-family:Barlow Condensed, sans-serif;border-color: #6fd110 red orange yellow;border-width: thick">
+          <legend>&nbsp;&nbsp; Haldi Ceremony&nbsp;&nbsp; </legend>
+           <div class="img1" style="width:450px;"><img src="haldi.jpg" alt=""></div>
+           <div class="img1" style="width:450px;"><img src="haldi1.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="haldi2.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="haldi3.jpg" alt=""></div>
+           </fieldset>
+
+        </div>
+        <div class="images">
+          <fieldset style="text-align: center;font-size: 30px;font-family:Barlow Condensed, sans-serif;border-color: #6fd110 red orange yellow;border-width: thick">
+          <legend>&nbsp;&nbsp; Varmala Ceremony&nbsp;&nbsp; </legend>
+           <div class="img1" style="width:450px;"><img src="varmala1.jpeg" alt=""></div>
+           <div class="img1" style="width:450px;"><img src="varmala2.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="varmala3.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="varmala4.jpg" alt=""></div>
+           </fieldset>
+
+        </div>
+        <div class="images">
+          <fieldset style="text-align: center;font-size: 30px;font-family:Barlow Condensed, sans-serif;border-color: #6fd110 red orange yellow;border-width: thick">
+          <legend>&nbsp;&nbsp; Birthday Party&nbsp;&nbsp; </legend>
+           <div class="img1" style="width:450px;"><img src="bday1.png" alt=""></div>
+           <div class="img1" style="width:450px;"><img src="bday2.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="bday3.jpg" alt=""></div>
+           <div class="img1" style="width:450px"><img src="bday4.jpg" alt=""></div>
+           </fieldset>
+
+        </div>
+</body>
+</html>

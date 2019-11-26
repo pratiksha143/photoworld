@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="left1">
+       
+   </div><div class="left2">
+       <p class="text1">PHOTOGRAPHIC</p>
+   </div><div class="right2"></div>
+   <div class="right1">
+       <p class="text2">WORLD</p>
+   </div>
+   <div class="menu">
+     <div>
+         <span class="q1">Oh Snap!<i class="fa fa-camera-retro" style="font-size:40px;color:black" aria-hidden=true></i></span>
+       </div>
+          <ul>
+           <li><a href="" style="color: orange">Home</a></li>
+           <li><a href="">About</a></li>
+           <li><a href="">Photography</a></li>
+           <li><a href="">Event</a></li>
+           <li><a href="">Contact</a></li>
+       </ul>
+   </div>
+</body>
+</html>

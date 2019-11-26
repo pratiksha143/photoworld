@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto+Mono&display=swap" rel="stylesheet">
+    <script>
+    onload=start;
+        function start(){
+            var i=1;
+            function Move()
+            {
+                i=(i%5)+1;
+                document.getElementById('id'+i).checked=true;
+                
+            }
+            setInterval(Move,3000);//change image in 3sec
+        }
+    
+    </script>
+    <style>
+        body{
+            height:180vh;
+            width:100%;
+            margin:0px;
+            padding: 0px;
+            background-color: rgba(0,0,0,1);
+          overflow-x:hidden;
+            
+        }
+        #id1,#id2,#id3,#id4,#id5{
+            display:none;
+        
+        }
+        .container1{
+            position:relative;
+            margin:0 auto;
+            margin-top:100px;
+            width:84%;
+            height:0;
+            padding-bottom:40%;
+            background-image:url('index.jpeg');
+             background-size: cover;
+             animation:about 2s linear infinite;
+            border-bottom: 15px solid rgba(0,0,0,0);
+/*
+            border:10px solid orange;
+            border-radius:10px;
+*/
+        }
+        
+        .container{
+            position:relative;
+            margin:0px auto;
+/*            margin-top:7.5%;*/
+            top:120px;
+            width:100%;
+            height:0;
+            padding-bottom:40%;
+            background-color:black;
+/*
+            border:10px solid;
+            border-color:#626261;
+*/
+            border-radius:10px;
+        }
+        .container .img_slide{
+            position:absolute;
+            width:100%;
+            height:100%;
+            
+        }
+        .container .img_slide img{
+            width:inherit;
+            height:inherit;
+            
+        }
+        .prev,.next{
+            width:10%;
+            height:inherit;
+            position:absolute;
+            top:0;
+            background-color:rgba(0,0,0,0.2);
+                color:white;
+            text-align:center;
+            cursor:pointer;
+            transition:0.5s;
+             }
+        .next{
+            right:0;
+        }
+        .prev{
+            left:0;
+        }
+        label i{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            
+        }
+        .fa{
+            font-size:60px;
+        }
+        .prev:hover,.next:hover{
+            background-color: rgba(88,88,88,.8);
+            color:white;
+            transition:0.3s;
+        }
+        
+        .img_slide{
+            z-index: -1;
+        }
+        #id1:checked~#one,
+        #id2:checked~#two,
+        #id3:checked~#three,
+        #id4:checked~#four,
+        #id5:checked~#five
+        {
+         z-index:9;   
+        }
+        .left1{
+            position: fixed;
+            top:0px;
+            left:0px;
+            width:4%;
+            height: 100%;
+            background-color: red;
+        }
+        .right1{
+            position: fixed;
+            top:0px;
+            right:0px;
+            width:4%;
+            height: 100%;
+            background-color:lawngreen;
+        }
+        .left2{
+            position: fixed;
+            top:0px;
+            left:4%;
+            width:4%;
+            height: 100%;
+            background-color: grey;
+        }
+        .right2{
+            position: fixed;
+            top:0px;
+            right:4%;
+            width:4%;
+            height: 100%;
+            background-color: yellow;
+        }
+        .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:100px;
+        padding:15px;
+        margin:10px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 20px;
+        }
+        .menu ul li a:hover{
+        color:orange;
+    }
+        .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:30px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 15px;
+        }
+        .text1
+        {
+             word-wrap: break-word;
+             font-family: monospace;
+             position: fixed;
+             top:120px;
+            left:5.3%;
+/*            z-index: 255581841515151;*/
+             width:10px;
+             height:auto;
+            font-size:2.5vw;
+            color:white;
+            font-weight: bolder;
+            text-shadow:5px 5px 15px red;
+            animation: text 1s linear infinite;
+        }
+        @keyframes text{
+            0%{
+                transform: translateY(-15px);
+            }
+            50%{
+                transform: translateY(0px);
+            }
+            100%{
+                transform: translateY(-15px);
+            }
+        }
+    .text2
+        {
+             word-wrap: break-word;
+             font-family: monospace;
+             position: fixed;
+             top:215px;
+            right:6%;
+             width:10px;
+             height:auto;
+            font-size:2.5vw;
+            color:white;
+            font-weight: bolder;
+            text-shadow:5px 5px 15px red;
+            animation: text 1s linear infinite;
+        }
+         .head_1{
+            position: relative;
+            top:60px;
+            left:20%;
+            transform: translateX(-50%);
+            color:#0f0e0e;
+            font-size:4vw;
+            font-family: 'Fredoka One', cursive;
+            background-color: rgba(255,255,255,.7);
+            padding:10px 20px 10px 15px;
+            border-radius: 10px;
+            border-left: 15px solid #b20ee3;
+            text-shadow:3px 3px 15px #424243;
+/*            transition: 5s;*/
+        }
+         .container2
+        {
+            border:10px solid orange;
+            height:100%;
+            overflow: hidden;
+/*            padding: 0px 0px 100px 0px;*/
+            width:84%;
+            position:relative;
+/*            top:120px;*/
+            margin:0 auto;
+            box-sizing: border-box;
+            background-color: black;
+}
+        .head_x{
+            position: absolute;
+            top:40px;
+            left:50%;
+            transform: translateX(-50%);
+            color:#0f0e0e;
+            font-size:4vw;
+            font-family: 'Fredoka One', cursive;
+            background-color: rgba(255,255,255,.7);
+            padding:10px 2% 10px 1%;
+            border-radius: 10px;
+            border-left: 15px solid #b20ee3;
+            text-shadow:3px 3px 15px #424243;
+/*            transition: 5s;*/
+        }
+            
+        .work{
+            border: 10px solid orange;
+            margin:0 auto;
+            width:83%;
+            height:640px;
+        }
+        
+        .card{
+            margin:50px;
+            border:3px solid grey;
+            float:left;
+            width:350px;
+            margin-left: 8%;
+            height:400px;
+            
+        }
+        .card img{
+            width:100%;
+            height:400px;
+        }
+        .end{
+            height: 480px;
+            padding: 100px;
+            margin: 0px auto;
+            width: 80%;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .end1{
+/*            border:5px solid red;*/
+            height:180px;
+            width:30%;
+            color:rgba(255,255,255,0.9);
+            line-height:22px;
+        }
+        .end2{
+/*            border:5px solid yellow;*/
+            height:200px;
+            width:20%;
+/*            display:inline;*/
+            position: absolute;
+            left:45%;
+/*            transform: translateX(-50%);*/
+            top:100px;
+            color:rgba(255,255,255,0.8);
+        }
+        .end2 ul{
+            list-style-type: none;
+            position:absolute;
+            left:-17%;
+            
+            
+        }
+        .end2 ul li a{
+    text-decoration: none;
+            color:rgba(255,255,255,.7);
+            margin-bottom: 20px;
+            display:block;
+            font: 16px sans-serif;
+        }
+        .end2 ul li a:hover{
+            color: rgba(255,255,255,0.4);
+/*            font-weight: bold;*/
+        }
+        .end3{
+/*            border:5px solid pink;*/
+            height:150px;
+            width:25%;
+/*            display:inline;*/
+            position: absolute;
+            left:81%;
+            transform: translateX(-50%);
+            top:100px;
+/*            line-height: 150px;*/
+        }
+        .btn{
+            display:inline-block;
+            width:60px;
+            height:60px;
+            background:rgba(255,255,255,.2);
+            margin:0px;
+            border-radius:50%;
+            box-shadow: 0px 5px 15px -5px #00000070; 
+            overflow:hidden;
+            position:relative;
+            top:30%;
+            left:10%;
+            color:orange;
+            text-align: center;
+        }
+    .btn i
+        {
+            font-size:24px;
+            line-height: 60px;
+            transition:0.2s linear;
+        }
+        .btn:hover i{
+            transform:scale(1.3);
+            color:blue;
+            
+        }
+        .btn::before{
+            content:"";
+            position:absolute;
+            width:120%;
+            height:120%;
+            background-color: white;
+            transform:rotate(45deg);
+            left:-110%;
+            top:90%;
+        }
+        .btn:hover::before{
+            animation:aaa .7s 1;
+            top:-10%;
+            left:-10%;
+        }
+        @keyframes aaa{
+            0%{
+             left:-110%;
+            top:90%;   
+            }
+            50%{
+               left:10%;
+                top:-30%;
+            }
+            100%{
+              top:-10%;
+            left:-10%;  
+            }
+        }
+        @media screen and (max-width:1000px)
+        {
+            .fa fa-camera-retro{
+                font-size:20px;
+            }
+          .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:25px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 10px;
+        }  
+            .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:80px;
+        padding:10px;
+        margin:7px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        }
+     @media screen and (max-width:800px)
+        {
+            .fa fa-camera-retro{
+                font-size:18px;
+            }
+          .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:20px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 10px;
+        }  
+            .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:70px;
+        padding:10px;
+        margin:6px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        }
+     @media screen and (max-width:600px)
+        {
+            .fa fa-camera-retro{
+                font-size:16px;
+            }
+          .q1{
+            position:fixed;
+            color:black;
+            left:5%;
+/*            line-height: 15%;*/
+            top:2.5%;
+            font:18px 'Roboto Mono', monospace;
+            background-color: lawngreen;
+            border-radius: 50%;
+            padding: 10px;
+        }  
+            .menu{
+            height:100px;
+            width:100%;
+            background-color: rgb(0,0,0);
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:67567577;
+/*            padding:10px;*/
+            box-sizing: border-box;
+/*            text-align: center;*/
+        }
+        .menu ul{
+            list-style: none;
+            display:inline-flex;
+            position: fixed;
+            right:2%;
+            text-align: center;
+        }
+        .menu ul li{
+           width:60px;
+        padding:10px;
+        margin:6px; 
+            text-align: center;
+        }
+        .menu ul li a{
+        text-decoration:none;
+        color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        }
+    
+        
+        @media screen and (max-width:800px)
+        {
+            .end2{
+                display:none;
+            }
+            .end1{
+                width:240px;
+            }
+            .end3{
+                height:300px;
+                width:100px;
+                position: absolute;
+                top:20px;
+            }
+            .q1{
+                display:none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  
+   <div class="left1">
+       
+   </div><div class="left2">
+       <p class="text1">PHOTOGRAPHIC</p>
+   </div><div class="right2"></div>
+   <div class="right1">
+       <p class="text2">WORLD</p>
+   </div>
+   <div class="menu">
+     <div>
+         <span class="q1">Oh Snap!<i class="fa fa-camera-retro" style="font-size:40px;color:black" aria-hidden=true></i></span>
+       </div>
+          <ul>
+           <li><a href="index.html" style="color: orange">Home</a></li>
+           <li><a href="About.html">About</a></li>
+           <li><a href="photography.html">Photography</a></li>
+           <li><a href="Event.html">Event</a></li>
+           <li><a href="contact.html">Contact</a></li>
+       </ul>
+   </div>
+   <div class="container1">  </div>
+   
+   <div class="work">
+   <span class="head_1">See My Work</span>
+<!--       <span class="head_2">See The Video</span>-->
+    <div class="container">
+       <input type="radio" id="id1" name="images" checked>
+       <input type="radio" id="id2" name="images">
+       <input type="radio" id="id3" name="images">
+       <input type="radio" id="id4" name="images">
+       <input type="radio" id="id5" name="images">
+       
+       
+       
+        <div class="img_slide" id="one">
+           <img src="photo1.jpg" alt="">
+           <label for="id5" class="prev"><i class="fa fa-caret-left" aria-hidden="true"></i></label>
+           <label for="id2" class="next"><i class="fa fa-caret-right" aria-hidden="true"></i></label> 
+        </div>
+          <div class="img_slide" id="two">
+           <img src="photo2.jpg" alt="">
+           <label for="id1" class="prev"><i class="fa fa-caret-left" aria-hidden="true"></i></label>
+           <label for="id3" class="next"><i class="fa fa-caret-right" aria-hidden="true"></i></label> 
+        </div>
+          <div class="img_slide" id="three">
+           <img src="photo3.jpg" alt="">
+           <label for="id2" class="prev"><i class="fa fa-caret-left" aria-hidden="true"></i></label>
+           <label for="id4" class="next"><i class="fa fa-caret-right" aria-hidden="true"></i></label> 
+        </div>
+          <div class="img_slide" id="four">
+           <img src="photo4.jpg" alt="">
+           <label for="id3" class="prev"><i class="fa fa-caret-left" aria-hidden="true"></i></label>
+           <label for="id5" class="next"><i class="fa fa-caret-right" aria-hidden="true"></i></label> 
+        </div>
+          <div class="img_slide" id="five">
+           <img src="photo5.jpg" alt="">
+           <label for="id4" class="prev"><i class="fa fa-caret-left" aria-hidden="true"></i></label>
+           <label for="id1" class="next"><i class="fa fa-caret-right" aria-hidden="true"></i></label> 
+        </div>
+        
+        
+        
+    </div>
+    </div>
+    <div class="container2">   
+   <span class="head_x">Our Photographers</span><br><br><br><br><br><br><br><br>
+   <div class="card"><img src="daboo.jpg" alt=""></div>
+   <div class="card"><img src="photographer2.jpg" alt=""></div>
+   <div class="card"><img src="photographer3.jpg" alt=""></div>
+   <div class="card"><img src="photographer4.jpg" alt=""></div>
+   
+    </div>
+    <div class="end" id="endd">
+       <div class="end1">
+        <span style="font-weight: bold;font-size: 20px;font-family: monospace;">Contact Info</span><br><br>
+        <img src="icon2.png" height="25px" width="25px" alt=""><span style="position: relative;top:-7px;left:10px;color:gray;font:18px sans-serif;letter-spacing: 1px;">34 Urban Deck, Mumbai</span><br>
+         
+         <img style="margin-top: 10px;" src="icon.ico" height="25px" width="25px" alt=""><span style="position: relative;top:-7px;left:10px;color:gray;font:18px sans-serif;letter-spacing: 1px;">8865889081</span><br>
+         
+         <img style="margin-top: 10px;" src="icon1.png" height="25px" width="25px" alt=""><span style="position: relative;top:-7px;left:10px;color:gray;font:18px sans-serif;letter-spacing: 1px;">Prakhar.bansal _cs17@gla.ac.in</span><br>
+         <br>
+         
+       </div>
+       <div class="end2">
+          <span style="font-weight: bold;font-size: 20px;color:rgba(255,255,255,0.9);font-family: monospace;">Quick&nbsp;Links</span><br><br>
+          <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Terms of Service</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Contact Us</a></li>
+          </ul>
+       </div>   
+       <div class="end3">
+         <a class=btn href="https://www.facebook.com/">
+           <i class="fa fa-facebook" aria-hidden="true"></i>
+       </a>
+    <a  class=btn href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a class=btn href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+       </div>
+       <br><br><br><br>
+        
+       <hr style="border: 1px solid rgba(255,255,255,0.2);">    
+       <p style="color:white;text-align: center;margin-top: 50px;">
+
+Copyright © 2019 All rights reserved. 
+
+</p>
+    </div>
+</body>
+</html>
